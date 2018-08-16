@@ -1,14 +1,17 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+    <ion-navbar>
+      <ion-title>login</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+      <h1>Username</h1>
+      <ion-item>
+          <ion-input placeholder="your user name" [(ngModel)]="username"></ion-input>        
+        </ion-item>
+        <button ion-button full (click)="goToChat()">Go to the chat</button>
+  </ion-content>
+  

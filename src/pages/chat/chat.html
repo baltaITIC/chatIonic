@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        Chat messages
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding> 
+      <ion-item *ngFor = "let m of msgs;" (click)="msgComplete(m)">
+        
+          <ion-label  color="secondary" *ngIf="m.user !== msg.user">{{m.user}}</ion-label>
+          <ion-label >{{m.msg}}</ion-label>
+          <ion-label  color="primary" class="alignme" *ngIf="m.user === msg.user">Me</ion-label>
+  
+      </ion-item> 
+  </ion-content>
+  
+  
+  <ion-footer>     
+    <ion-textarea type="tel" placeholder="Your message" [(ngModel)]="msg.msg" ></ion-textarea>    
+    <button ion-button block (click)="sendMsg()">Send Message</button>
+  </ion-footer>
+  
